@@ -1,9 +1,9 @@
 //============================================================================
 // Name        : Die_Roller.cpp
-// Author      : 
-// Version     :
+// Author      : Christopher Mars
+// Version     :1.3
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : Die_Roller guessing game.
 //============================================================================
 
 #include <iostream>
