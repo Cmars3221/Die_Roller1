@@ -73,7 +73,7 @@ int main() {
             }
 		}
 		else {
-			cout << "We'll you're not a telepath. Try again!" << endl;
+			cout << "Well you're not a telepath. Try again!" << endl;
 			count +=1;
 			cout<<endl;
 		}
