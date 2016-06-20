@@ -30,15 +30,16 @@ int cast() {
 int main() {
 
 	int number_picked;
-	bool exit;
+	bool exit = false;
 	int count = 1;
+	char answer;
 
 
-	while (!exit) {
+	begin: while (!exit) {
 
 		cout << "Pick a number, my friend: " << flush;
 		cin >> number_picked;
-		cout << "You picked: " << number_picked << endl;
+		cout << "You picked: "<< number_picked << endl;
 
 		cout << "The computer picks a: " << cast() <<endl;
 
@@ -46,11 +47,30 @@ int main() {
 
 		if(count >=5){
 			 cout<< "Sorry buddy...you had 5 chances..!"<<endl;
-			 exit = true;
+			 cout<<"Play again?  y or n :  " <<flush;
+	            cin>>answer;
+	            if(answer== 'n'){
+	            	exit = true;
+	            }
+	            else{
+	            	count = 1;
+	            	goto begin;  // restart loop.
+	            }
+
 		}
 		else if(die_cast == number_picked) {
-			cout << " Nice, great guess. You win!"<<endl;
-			exit = true;
+//			char answer;
+
+			cout << " Nice! Great guess!*** YOU WIN!!!"<<endl;
+            cout<<"Play again?  y or n :  " <<flush;
+            cin>>answer;
+            if(answer== 'n'){
+            	exit = true;
+            }
+            else{
+            	count = 1;
+            	goto begin;  // restart loop.
+            }
 		}
 		else {
 			cout << "We'll you're not a telepath. Try again!" << endl;
